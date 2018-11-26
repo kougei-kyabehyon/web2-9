@@ -16,9 +16,16 @@
       $(this).removeClass("hilite");
     });
   });
+    
+     $(function(){
+    $("#toggle").on("click",function(){
+    $("#target").fadeToggle("slow");             
+    });
+  });
+
   </script>
   <style>
-  p { color:blue; margin:5px; cursor:pointer; }
+  p { color:blue; margin:30px; cursor:pointer; }
   p.hilite { background:green; }
   </style>
   </head>
@@ -26,5 +33,9 @@
  <p>1っこめ　だ！！</p>
   <p>２こめ　クリック！！</p>
   <p>ラスと　おせ！！</p>
+    
+    <div id="target">ボタン</div>
+    <button id="toggle">切り替え</button>
+  
   </body>
   </html>
